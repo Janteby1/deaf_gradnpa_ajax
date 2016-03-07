@@ -1,0 +1,18 @@
+{%load staticfiles%}
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="{%static "deafgrandpa/django_ajax.js"%}"></script>
+	<script src="{%static "deafgrandpa/grandpa.js"%}"></script>
+</head>
+<body>
+	<h1>Deaf Grandpa</h1>
+	<form name="say" id="say_grandpa" action='/' method="POST">
+	{%csrf_token%}
+	<input type="text" name='said' placeholder="Say to Grandpa" />
+	<input id="submit_grandpa" type="submit" value="Say!" />
+	</form>
+
+	<div class ='grandpa'></div>
+</body>
+</html>
